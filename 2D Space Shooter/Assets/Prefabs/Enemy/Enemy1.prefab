@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f6c863a23337145933ff9d23dff171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemeHealth: 3
+  enemeHealth: 2
   objBullet: {fileID: 4520661032819387338, guid: 8150a3ffa7c85934bb6edca4f50672a8, type: 3}
   shotTimeMin: 1
   shotTimeMax: 2
