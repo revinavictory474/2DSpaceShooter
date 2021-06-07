@@ -6,8 +6,17 @@ public class Enemy : MonoBehaviour
 {
 
     public int enemeHealth;
+    [Space]
+    public GameObject objBullet;
+    public float shotTimeMin;
+    public float shotTimeMax;
+    public int shotChance;
 
-   
+    private void Start()
+    {
+        Invoke("OpenFire", Random.Range(shotTimeMin, shotTimeMax));
+    }
+
 
     public void GetDamage(int damage)
     {
@@ -30,6 +39,14 @@ public class Enemy : MonoBehaviour
         {
             GetDamage(1);
             Player.instance.GetDamage(1);
+        }
+    }
+
+    private void OpenFire()
+    {
+        if (Random.value < (float)shotChance/100)
+        {
+            Instantiate(objBullet, transform.position, Quaternion.identity);
         }
     }
 }
