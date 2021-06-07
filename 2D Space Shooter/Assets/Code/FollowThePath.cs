@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FollowThePath : MonoBehaviour
 {
-    public Transform[] waypoints;
-    public float speedEnemy;
-    public bool isReturn;
-    public Vector3[] newPosition;
+    [HideInInspector] public Transform[] waypoints;
+    [HideInInspector] public float speedEnemy;
+    [HideInInspector] public bool isReturn;
+    [HideInInspector] public Vector3[] newPosition;
     private int currentPosition;
 
     private void Start()
@@ -42,9 +42,28 @@ public class FollowThePath : MonoBehaviour
         {
             pathPosit[i] = pathPosition[i].position;
         }
+
+        pathPosit = Smooshing(pathPosit);
+        pathPosit = Smooshing(pathPosit);
+        pathPosit = Smooshing(pathPosit);
+
         return pathPosit;
 
     }
 
+    private Vector3[] Smooshing(Vector3[] pathPos)
+    {
+        Vector3[] newPathPos = new Vector3[(pathPos.Length - 2) * 2 + 2];
+        newPathPos[0] = pathPos[0];
+        newPathPos[newPathPos.Length - 1] = pathPos[pathPos.Length - 1];
 
+        int j = 1;
+        for (int i = 0; i < pathPos.Length - 2; i++)
+        {
+            newPathPos[j] = pathPos[i] + (pathPos[i + 1] - pathPos[i]) * 0.75f;
+            newPathPos[j + 1] = pathPos[i + 1] + (pathPos[i + 2] - pathPos[i + 1]) * 0.25f;
+            j += 2;
+        }
+        return newPathPos;
+    }
 }
