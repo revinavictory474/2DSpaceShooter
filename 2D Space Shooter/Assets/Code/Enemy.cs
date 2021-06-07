@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
         if(collision.tag == "Player")
         {
             GetDamage(1);
+            Player.instance.GetDamage(1);
         }
     }
 }
