@@ -13,6 +13,7 @@ public class FollowThePath : MonoBehaviour
     private void Start()
     {
         newPosition = NewPosition(waypoints);
+        transform.position = newPosition[0];
     }
 
     private void Update()
