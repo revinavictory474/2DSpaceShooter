@@ -25,5 +25,10 @@ public class Bullet : MonoBehaviour
             collision.GetComponent<Enemy>().GetDamage(damage);
             Destruction();
         }
+        else if (isEnemyBullet&&collision.tag=="Shield")
+        {
+            Player.instance.GetDamageShield(damage);
+            Destruction();
+        }
     }
 }
