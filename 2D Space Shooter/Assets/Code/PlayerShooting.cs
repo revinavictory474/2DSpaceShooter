@@ -9,6 +9,10 @@ public class Guns
     public GameObject objCentralGun;
     public GameObject objRightGun;
     public GameObject objLeftGun;
+
+    public ParticleSystem centralGun;
+    public ParticleSystem leftGun;
+    public ParticleSystem rightGun;
 }
 public class PlayerShooting : MonoBehaviour
 {
@@ -26,6 +30,13 @@ public class PlayerShooting : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+    }
+
+    private void Start()
+    {
+        guns.centralGun = guns.objCentralGun.GetComponent<ParticleSystem>();
+        guns.leftGun = guns.objLeftGun.GetComponent<ParticleSystem>();
+        guns.rightGun = guns.objRightGun.GetComponent<ParticleSystem>();
     }
 
     private void Update()
@@ -48,15 +59,21 @@ public class PlayerShooting : MonoBehaviour
         {
             case 1:
                 CreateBullet(objBullet, guns.objCentralGun.transform.position, Vector3.zero);
+                guns.centralGun.Play();
                 break;
             case 2:
                 CreateBullet(objBullet, guns.objRightGun.transform.position, Vector3.zero);
                 CreateBullet(objBullet, guns.objLeftGun.transform.position, Vector3.zero);
+                guns.rightGun.Play();
+                guns.leftGun.Play();
                 break;
             case 3:
                 CreateBullet(objBullet, guns.objCentralGun.transform.position, Vector3.zero);
                 CreateBullet(objBullet, guns.objRightGun.transform.position, new Vector3(0,0,-5));
                 CreateBullet(objBullet, guns.objLeftGun.transform.position, new Vector3(0,0,5));
+                guns.centralGun.Play();
+                guns.rightGun.Play();
+                guns.leftGun.Play();
                 break;
             case 4:
                 CreateBullet(objBullet, guns.objCentralGun.transform.position, Vector3.zero);
@@ -64,6 +81,9 @@ public class PlayerShooting : MonoBehaviour
                 CreateBullet(objBullet, guns.objRightGun.transform.position, new Vector3(0,0,5));
                 CreateBullet(objBullet, guns.objLeftGun.transform.position, new Vector3(0,0,0));
                 CreateBullet(objBullet, guns.objLeftGun.transform.position, new Vector3(0,0,-5));
+                guns.centralGun.Play();
+                guns.rightGun.Play();
+                guns.leftGun.Play();
                 break;
             case 5:
                 CreateBullet(objBullet, guns.objCentralGun.transform.position, Vector3.zero);
@@ -71,6 +91,9 @@ public class PlayerShooting : MonoBehaviour
                 CreateBullet(objBullet, guns.objRightGun.transform.position, new Vector3(0, 0, -15));
                 CreateBullet(objBullet, guns.objLeftGun.transform.position, new Vector3(0, 0, 5));
                 CreateBullet(objBullet, guns.objLeftGun.transform.position, new Vector3(0, 0, 15));
+                guns.centralGun.Play();
+                guns.rightGun.Play();
+                guns.leftGun.Play();
                 break;
         }
     }
