@@ -62,6 +62,11 @@ public class Enemy : MonoBehaviour
             GetDamage(1);
             Player.instance.GetDamage(1);
         }
+        if (collision.tag == "Shield")
+        {
+            GetDamage(1);
+            Player.instance.GetDamageShield(1);
+        }
     }
 
     private void OpenFire()
