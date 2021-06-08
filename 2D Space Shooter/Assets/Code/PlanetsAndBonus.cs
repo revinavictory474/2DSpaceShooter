@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlanetsAndBonus : MonoBehaviour
 {
+    public GameObject objBonus;
+    public float timeBonusSpawn;
     public GameObject[] objectPlanets;
     public float timePlanetSpawn;
     public float speedPlanets;
@@ -12,6 +14,7 @@ public class PlanetsAndBonus : MonoBehaviour
     void Start()
     {
         StartCoroutine(PlanetsCreation());
+        StartCoroutine(BonusCreation());
     }
 
     private IEnumerator PlanetsCreation()
@@ -40,6 +43,16 @@ public class PlanetsAndBonus : MonoBehaviour
             newPlanet.GetComponent<ObjectMove>().speed = speedPlanets;
 
             yield return new WaitForSeconds(timePlanetSpawn);
+        }
+    }
+
+    private IEnumerator BonusCreation()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(timeBonusSpawn);
+            Instantiate(objBonus, new Vector2(Random.Range(PlayerMove.instance.borders.minX, PlayerMove.instance.borders.maxX),
+                PlayerMove.instance.borders.maxY * 1.5f), Quaternion.identity);
         }
     }
 }
