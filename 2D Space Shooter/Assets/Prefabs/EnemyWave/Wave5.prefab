@@ -101,7 +101,6 @@ GameObject:
   - component: {fileID: 2196798940057275806}
   - component: {fileID: 2196798940057275807}
   - component: {fileID: 2196798940057275801}
-  - component: {fileID: -8839682647020694614}
   m_Layer: 0
   m_Name: Wave5
   m_TagString: Untagged
@@ -174,21 +173,6 @@ MonoBehaviour:
   shotChance: 75
   shotTimeMin: 2
   shotTimeMax: 4
---- !u!114 &-8839682647020694614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2196798940057275804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa52fd8578cdf74f8b71d1fe58a83fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToStart: 25
-  wave: {fileID: 2196798940057275804}
-  isLastWave: 0
 --- !u!1 &2196798940322652097
 GameObject:
   m_ObjectHideFlags: 0

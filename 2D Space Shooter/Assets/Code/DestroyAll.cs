@@ -32,6 +32,9 @@ public class DestroyAll : MonoBehaviour
             case "Planet":
                 Destroy(collision.gameObject);
                 break;
+            case "Bullet":
+                Destroy(collision.gameObject);
+                break;
         }
     }
 }

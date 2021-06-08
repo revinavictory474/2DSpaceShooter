@@ -15,17 +15,6 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
     }
 
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
-
     public void GetDamage(int damage)
     {
         playerHealth -= damage;

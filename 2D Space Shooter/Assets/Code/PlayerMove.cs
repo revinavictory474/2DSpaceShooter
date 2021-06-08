@@ -28,6 +28,7 @@ public class PlayerMove : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             _mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+            _mousePosition.y += 1.5f;
             transform.position = Vector2.MoveTowards(transform.position, _mousePosition, speedPlayer * Time.deltaTime); 
         }
 

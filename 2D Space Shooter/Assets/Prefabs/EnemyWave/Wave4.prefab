@@ -191,7 +191,6 @@ GameObject:
   - component: {fileID: 4975247460103019987}
   - component: {fileID: 4975247460103019986}
   - component: {fileID: 4975247460103019988}
-  - component: {fileID: -4711382821073644739}
   m_Layer: 0
   m_Name: Wave4
   m_TagString: Untagged
@@ -260,18 +259,3 @@ MonoBehaviour:
   shotChance: 50
   shotTimeMin: 2
   shotTimeMax: 3
---- !u!114 &-4711382821073644739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4975247460103019985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa52fd8578cdf74f8b71d1fe58a83fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToStart: 15
-  wave: {fileID: 4975247460103019985}
-  isLastWave: 0

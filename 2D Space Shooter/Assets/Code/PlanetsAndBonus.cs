@@ -26,7 +26,7 @@ public class PlanetsAndBonus : MonoBehaviour
         {
             int random = Random.Range(0, planetList.Count);
             GameObject newPlanet = Instantiate(planetList[random], new Vector2(Random.Range(PlayerMove.instance.borders.minX, PlayerMove.instance.borders.maxX),
-                PlayerMove.instance.borders.maxY * 1.5f), Quaternion.Euler(0, 0, Random.Range(-25, 25)));
+                PlayerMove.instance.borders.maxY * 2.0f), Quaternion.Euler(0, 0, Random.Range(-25, 25)));
 
             planetList.RemoveAt(random);
 

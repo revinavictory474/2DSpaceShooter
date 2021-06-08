@@ -71,7 +71,6 @@ GameObject:
   - component: {fileID: 1738698046319201438}
   - component: {fileID: 1738698046319201439}
   - component: {fileID: 1738698046319201433}
-  - component: {fileID: -1468173865880893517}
   m_Layer: 0
   m_Name: Wave6
   m_TagString: Untagged
@@ -114,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingSettings: {fileID: 1738698046319201433}
-  objEnemy: {fileID: 5925190992270940174, guid: ecc298352460c154089528ecc97a2a7f, type: 3}
+  objEnemy: {fileID: 5925190992270940174, guid: 7500f9c193677bf40ae1e0f40d2ddb33, type: 3}
   waypoints:
   - {fileID: 1738698045341116409}
   - {fileID: 1738698045686053909}
@@ -144,21 +143,6 @@ MonoBehaviour:
   shotChance: 85
   shotTimeMin: 2
   shotTimeMax: 5
---- !u!114 &-1468173865880893517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738698046319201436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa52fd8578cdf74f8b71d1fe58a83fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToStart: 40
-  wave: {fileID: 1738698046319201436}
-  isLastWave: 1
 --- !u!1 &1738698046546615287
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7941401770894985229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.88, y: -4, z: 0}
+  m_LocalPosition: {x: 9.53, y: -9.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1738698046319201438}

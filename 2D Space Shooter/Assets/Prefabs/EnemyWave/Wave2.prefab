@@ -71,7 +71,6 @@ GameObject:
   - component: {fileID: 2899410672890359405}
   - component: {fileID: 2899410672890359404}
   - component: {fileID: 2899410672890359402}
-  - component: {fileID: -869271791954256987}
   m_Layer: 0
   m_Name: Wave2
   m_TagString: Untagged
@@ -110,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingSettings: {fileID: 2899410672890359402}
-  objEnemy: {fileID: 5925190992270940174, guid: ecc298352460c154089528ecc97a2a7f, type: 3}
+  objEnemy: {fileID: 5925190992270940174, guid: 8b9d820913a77f8459c69cc392e346cb, type: 3}
   waypoints:
   - {fileID: 2899410672446571786}
   - {fileID: 2899410672256736998}
@@ -118,7 +117,7 @@ MonoBehaviour:
   - {fileID: 2899410673675566131}
   countInWave: 7
   speedEnemy: 4
-  timeSpawnEnemy: 1.3
+  timeSpawnEnemy: 0.6
   isReturn: 0
   isTest: 0
 --- !u!114 &2899410672890359402
@@ -136,21 +135,6 @@ MonoBehaviour:
   shotChance: 20
   shotTimeMin: 1
   shotTimeMax: 3
---- !u!114 &-869271791954256987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2899410672890359407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa52fd8578cdf74f8b71d1fe58a83fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToStart: 6
-  wave: {fileID: 2899410672890359407}
-  isLastWave: 0
 --- !u!1 &2899410673652807940
 GameObject:
   m_ObjectHideFlags: 0

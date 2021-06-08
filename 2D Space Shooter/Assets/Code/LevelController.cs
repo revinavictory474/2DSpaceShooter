@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class EnemyWaves 
+{
+    public float timeToStart;
+    public GameObject wave;
+    public bool isLastWave;
+}
 
 public class LevelController : MonoBehaviour
 {
