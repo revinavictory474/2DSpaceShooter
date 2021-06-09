@@ -17,7 +17,7 @@ public class LevelController : MonoBehaviour
     public static LevelController instance;
     public GameObject[] playerShips;
     public EnemyWaves[] enemyWaves;
-    public bool isFinal;
+    public bool isFinal = false;
     public GameObject panel;
     private bool isPause;
     public GameObject[] btnPause;
@@ -52,13 +52,11 @@ public class LevelController : MonoBehaviour
     {
         if(isFinal == true && GameObject.FindGameObjectsWithTag("Enemy").Length == 0 && !isPause)
         {
-            Debug.Log("WIN");
             GamePause();
             btnPause[1].SetActive(false);
         }
         if(Player.instance == null && !isPause)
         {
-            Debug.Log("LOSE");
             GamePause();
         }
     }

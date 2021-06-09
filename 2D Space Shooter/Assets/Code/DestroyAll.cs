@@ -35,6 +35,9 @@ public class DestroyAll : MonoBehaviour
             case "Bullet":
                 Destroy(collision.gameObject);
                 break;
+            case "Bonus":
+                Destroy(collision.gameObject);
+                break;
         }
     }
 }

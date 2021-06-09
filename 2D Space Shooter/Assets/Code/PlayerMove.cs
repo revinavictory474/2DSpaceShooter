@@ -2,6 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class Borders 
+{
+    public float minXOffset = 1.1f;
+    public float maxXOffset = 1.1f;
+    public float minYOffset = 1.1f;
+    public float maxYOffset = 1.1f;
+
+    [HideInInspector] public float minX;
+    [HideInInspector] public float maxX;
+    [HideInInspector] public float minY;
+    [HideInInspector] public float maxY;
+}
+
 public class PlayerMove : MonoBehaviour
 {
     public static PlayerMove instance;
@@ -13,8 +27,14 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         if (instance == null)
+        { 
             instance = this;
-        else Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         _camera = Camera.main;
     }
 

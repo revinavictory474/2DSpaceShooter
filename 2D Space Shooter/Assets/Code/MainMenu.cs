@@ -19,7 +19,7 @@ public class DataBase
     public int costSpeed = 400;
     public int costShield = 950;
 
-    public int Score = 99999;
+    public int Score = 0;
     public int ScoreGame = 0;
 
 
@@ -87,10 +87,10 @@ public class MainMenu : MonoBehaviour
         DataBase.instance.LoadGameSave();
     }
 
-    public void BtnDeleteSaveGameDEBUG()
-    {
-        PlayerPrefs.DeleteAll();
-    }
+    //public void BtnDeleteSaveGameDEBUG()
+    //{
+    //    PlayerPrefs.DeleteAll();
+    //}
 
     public void BtnChoiseLevelGame(string name)
     {
@@ -223,7 +223,6 @@ public class MainMenu : MonoBehaviour
     {
         if(PlayerPrefs.HasKey("InfoSaveScore"))
         {
-            Debug.Log("found save game");
             BtnLoadGameSave();
         }
 

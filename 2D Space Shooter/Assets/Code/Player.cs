@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public static Player instance;
+    public static Player instance = null;
     public int playerHealth = 1;
     public GameObject objShield;
     public int shieldHealth = 1;
@@ -27,12 +27,12 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        sliderHPPlayer.value = (float)playerHealth / 10;
+        sliderHPPlayer.value = (float)playerHealth / 15;
 
         if(shieldHealth != 0)
         {
             objShield.SetActive(true);
-            sliderHPShield.value = (float)shieldHealth / 10;
+            sliderHPShield.value = (float)shieldHealth / 6;
         }
         else
         {
