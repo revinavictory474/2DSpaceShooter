@@ -131,6 +131,7 @@ public class MainMenu : MonoBehaviour
 
     public void ShopCheckPlayerShip(int num)
     {
+
         if (DataBase.instance.playerShipsInfo[num][1] == 0)
         {
             for (int i = 0; i < DataBase.instance.playerShipsInfo.Length; i++)
@@ -141,6 +142,7 @@ public class MainMenu : MonoBehaviour
             _index = num;
             btnShopBuy.SetActive(false);
         }
+
         if (DataBase.instance.playerShipsInfo[num][1] != 0 &&
             DataBase.instance.playerShipsInfo[num][1] <= DataBase.instance.Score)
         {
@@ -154,6 +156,7 @@ public class MainMenu : MonoBehaviour
         {
             btnShopBuy.SetActive(false);
         }
+
         ShopShipHighlighting();
     }
 
