@@ -99,7 +99,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9ca874d92eac143b39549fe3611b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  borders: {fileID: 0}
+  borders:
+    minXOffset: 1.1
+    maxXOffset: 1.1
+    minYOffset: 1.1
+    maxYOffset: 1.1
+    minX: 0
+    maxX: 0
+    minY: 0
+    maxY: 0
   speedPlayer: 5
 --- !u!61 &8687552101355630995
 BoxCollider2D:
@@ -9960,8 +9968,8 @@ MonoBehaviour:
     centralGun: {fileID: 0}
     leftGun: {fileID: 0}
     rightGun: {fileID: 0}
-  timeBulletSpawn: 0.3
-  timerShot: 0
+  timeBulletSpawn: 0.6
+  timerShot: 2
   curPuwerLevelGuns: 1
 --- !u!1 &8687552102533581337
 GameObject:
