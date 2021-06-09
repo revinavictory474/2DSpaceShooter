@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cef0e6edb834c4494ac09d84ca07ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.6
+  speed: -1.6
 --- !u!1 &381707688
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +778,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0c6ee2f07ba03e74ba5eaa4ea7006f86, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1173,51 +1173,54 @@ MonoBehaviour:
   - timeToStart: 2
     wave: {fileID: 5471968505161768749, guid: 32405f6ab8d0b3d4e8e4dbc2f21881e1, type: 3}
     isLastWave: 0
-  - timeToStart: 10
+  - timeToStart: 9
     wave: {fileID: 2899410672890359407, guid: 44be0e68b8d95e54eb968b54e1cdf762, type: 3}
     isLastWave: 0
-  - timeToStart: 17
+  - timeToStart: 16
     wave: {fileID: 4437111556540509185, guid: 80277157b12fe504386fb87ad437e613, type: 3}
     isLastWave: 0
-  - timeToStart: 30
+  - timeToStart: 29
     wave: {fileID: 2899410672890359407, guid: 44be0e68b8d95e54eb968b54e1cdf762, type: 3}
     isLastWave: 0
-  - timeToStart: 37
+  - timeToStart: 36
     wave: {fileID: 4437111556540509185, guid: 80277157b12fe504386fb87ad437e613, type: 3}
     isLastWave: 0
-  - timeToStart: 50
+  - timeToStart: 49
     wave: {fileID: 4975247460103019985, guid: b864c2e1a317ff64a949285b44b60510, type: 3}
     isLastWave: 0
-  - timeToStart: 67
+  - timeToStart: 66
     wave: {fileID: 4437111556540509185, guid: 80277157b12fe504386fb87ad437e613, type: 3}
     isLastWave: 0
-  - timeToStart: 79
+  - timeToStart: 78
     wave: {fileID: 2196798940057275804, guid: 0bfddb75060fab04985322deeb0b4d7e, type: 3}
     isLastWave: 0
-  - timeToStart: 99
+  - timeToStart: 98
     wave: {fileID: 4437111556540509185, guid: 80277157b12fe504386fb87ad437e613, type: 3}
     isLastWave: 0
-  - timeToStart: 110
+  - timeToStart: 109
     wave: {fileID: 2899410672890359407, guid: 44be0e68b8d95e54eb968b54e1cdf762, type: 3}
     isLastWave: 0
-  - timeToStart: 117
+  - timeToStart: 115
     wave: {fileID: 1738698046319201436, guid: 374f0bd9d93e32840a5a037179275d49, type: 3}
     isLastWave: 0
-  - timeToStart: 140
+  - timeToStart: 138
     wave: {fileID: 1738698046319201436, guid: c786d3a001465ed459bf2e01c8a67ab0, type: 3}
     isLastWave: 0
-  - timeToStart: 167
+  - timeToStart: 165
     wave: {fileID: 2196798940057275804, guid: 0bfddb75060fab04985322deeb0b4d7e, type: 3}
     isLastWave: 0
-  - timeToStart: 186
+  - timeToStart: 184
     wave: {fileID: 1738698046319201436, guid: 374f0bd9d93e32840a5a037179275d49, type: 3}
     isLastWave: 0
-  - timeToStart: 210
+  - timeToStart: 208
     wave: {fileID: 1738698046319201436, guid: 43aedc4c638cd3648b776efa6e84dde8, type: 3}
     isLastWave: 0
-  - timeToStart: 237
+  - timeToStart: 235
     wave: {fileID: 1738698046319201436, guid: e1beeda75e023d846aface55d0d6098b, type: 3}
     isLastWave: 1
+  - timeToStart: 3
+    wave: {fileID: 4437111556540509185, guid: 80277157b12fe504386fb87ad437e613, type: 3}
+    isLastWave: 0
   isFinal: 0
   panel: {fileID: 1179542981}
   btnPause:
@@ -2121,7 +2124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cef0e6edb834c4494ac09d84ca07ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.9
+  speed: -1.9
 --- !u!1 &1337000631
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,7 +3094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cef0e6edb834c4494ac09d84ca07ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1.3
+  speed: -2.3
 --- !u!1 &2081372978
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public int enemeHealth;
+    public int enemyHealth;
+    public int scoreValue; 
     [Space]
     public GameObject objBullet;
     public float shotTimeMin;
@@ -42,9 +43,9 @@ public class Enemy : MonoBehaviour
 
     public void GetDamage(int damage)
     {
-        enemeHealth -= damage;
+        enemyHealth -= damage;
 
-        if(enemeHealth <=0)
+        if(enemyHealth <=0)
         {
             Destruction();
         }
@@ -52,6 +53,7 @@ public class Enemy : MonoBehaviour
 
     private void Destruction()
     {
+        LevelController.instance.ScoreInGame(scoreValue);
         Destroy(gameObject);
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class EnemyWaves 
@@ -20,6 +21,7 @@ public class LevelController : MonoBehaviour
     public GameObject panel;
     private bool isPause;
     public GameObject[] btnPause;
+    public Text textScore;
 
     private void Awake()
     {
@@ -31,6 +33,15 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
+
+        for(int i = 0; i<DataBase.instance.playerShipsInfo.Length; i++)
+        {
+            if(DataBase.instance.playerShipsInfo[i][0] == 1)
+            {
+                LoadPlayer(i);
+            }
+        }
         for ( int i = 0; i< enemyWaves.Length; i++)
         {
             StartCoroutine(CreateEnemyWave(enemyWaves[i].timeToStart,enemyWaves[i].wave, enemyWaves[i].isLastWave));
@@ -50,6 +61,20 @@ public class LevelController : MonoBehaviour
             Debug.Log("LOSE");
             GamePause();
         }
+    }
+
+    public void ScoreInGame(int score)
+    {
+        DataBase.instance.ScoreGame += score;
+        textScore.text = "Score: " + DataBase.instance.ScoreGame.ToString();
+    }
+
+    public void LoadPlayer(int ship)
+    {
+        Instantiate(playerShips[ship]);
+        Player.instance.playerHealth = DataBase.instance.playerShipsInfo[ship][2];
+        PlayerMove.instance.speedPlayer = DataBase.instance.playerShipsInfo[ship][3];
+        Player.instance.shieldHealth = DataBase.instance.playerShipsInfo[ship][4];
     }
 
     public void GamePause()
@@ -80,8 +105,15 @@ public class LevelController : MonoBehaviour
 
     public void BtnRestartGame()
     {
+        DataBase.instance.ScoreGame = 0;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void BtnExitGame()
+    {
+        DataBase.instance.SaveGame();
+        DataBase.instance.GameLoadScene("Menu");
     }
 
     private IEnumerator CreateEnemyWave(float delay, GameObject wave, bool final)
