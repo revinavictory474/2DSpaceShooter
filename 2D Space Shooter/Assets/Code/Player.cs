@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public static Player instance = null;
-    public int playerHealth = 1000;
+    public int playerHealth;
     public GameObject objShield;
     public int shieldHealth = 1;
 
@@ -85,8 +85,7 @@ public class Player : MonoBehaviour
         }
     }
 
-
-    private void Destruction()
+    public void Destruction()
     {
         Destroy(gameObject);
     }
