@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5154027448209722796}
   m_Layer: 0
   m_Name: Bonus
-  m_TagString: Untagged
+  m_TagString: Bonus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a559a228d0652a14eb59bf6465c8b387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWork: 0
+  timerCurrent: 0
+  timerBonus: 5
 --- !u!114 &3228688865371015559
 MonoBehaviour:
   m_ObjectHideFlags: 0

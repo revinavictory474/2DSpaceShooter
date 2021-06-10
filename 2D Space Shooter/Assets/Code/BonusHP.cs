@@ -8,9 +8,7 @@ public class BonusHP : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-
             Player.instance.playerHealth += 5;
-
             Destroy(gameObject);
         }
     }

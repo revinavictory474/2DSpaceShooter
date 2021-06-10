@@ -10,6 +10,7 @@ public class BonusShield : MonoBehaviour
         {
 
             Player.instance.shieldHealth += 5;
+            Player.instance.objShield.SetActive(true);
 
             Destroy(gameObject);
         }
