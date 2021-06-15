@@ -22,6 +22,8 @@ public class PlayerShooting : MonoBehaviour
     public Guns guns;
     public float timeBulletSpawn = 0.3f;
     public float timerShot;
+    public float currentLiveBonus;
+    public float timeLiveBonus = 17.0f;
     [Range(1, 5)] public int curPuwerLevelGuns = 1;
 
     private void Awake()
@@ -51,6 +53,11 @@ public class PlayerShooting : MonoBehaviour
     private void CreateBullet(GameObject bullet, Vector3 positionBullet, Vector3 rotationBullet)
     {
         Instantiate(bullet, positionBullet, Quaternion.Euler(rotationBullet));
+    }
+
+    private void DeleteBonus()
+    {
+        
     }
 
     private void MakeAShot()

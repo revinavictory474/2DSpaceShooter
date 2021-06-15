@@ -6,9 +6,13 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public static Player instance = null;
-    public int playerHealth = 1;
+    public int playerHealth;
     public GameObject objShield;
     public int shieldHealth = 1;
+
+    public float timerBonus = 5.0f;
+    //public float currentTimerBonusShot;
+    //public float timerBonusShot = 15.0f;
 
     private Slider sliderHPPlayer;
     private Slider sliderHPShield;
@@ -41,6 +45,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        DecreaseTime();
+    }
+
     public void GetDamage(int damage)
     {
         playerHealth -= damage;
@@ -59,7 +68,24 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Destruction()
+    private void DecreaseTime()
+    {
+        if (PlayerShooting.instance.curPuwerLevelGuns > 1)
+        {
+            timerBonus -= Time.deltaTime;
+
+            if (timerBonus <= 0)
+            {
+                PlayerShooting.instance.curPuwerLevelGuns--;
+
+                Debug.Log("Decrease gun");
+
+                timerBonus = 5;
+            }
+        }
+    }
+
+    public void Destruction()
     {
         Destroy(gameObject);
     }
